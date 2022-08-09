@@ -8,17 +8,21 @@ function sliderPlugin(activeSlide = 0) {
   slides.forEach((slide) => {
     slide.addEventListener("click", () => {
       const classList = Object.values(slide.classList);
-      if (classList.some((currentClass) => currentClass === "active")) {
-        unsetActiveAllSlides();
-        unsetActiveAllDescription();
-      } else {
-        unsetActiveAllSlides();
-        unsetActiveAllDescription();
-        slide.classList.add("active");
-        slide.children[1].classList.add("active");
-      }
+      const isCurrentSlideActive = classList.some(
+        (currentClass) => currentClass === "active"
+      );
+
+      unsetActiveAllSlides();
+      unsetActiveAllDescription();
+
+      if (!isCurrentSlideActive) setActiveCurrentSlideAndDescription(slide);
     });
   });
+
+  const setActiveCurrentSlideAndDescription = (slide) => {
+    slide.classList.add("active");
+    slide.children[1].classList.add("active");
+  };
 
   const unsetActiveAllSlides = () => {
     slides.forEach((slide) => slide.classList.remove("active"));
