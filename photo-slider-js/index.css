@@ -69,3 +69,11 @@ body {
   justify-content: center;
   display: flex;
 }
+
+.hold {
+  background-color: red;
+}
+
+.hide {
+  display: none;
+}

@@ -1,7 +1,7 @@
-function sliderPlugin(activeSlide = 0) {
-  const slides = document.querySelectorAll(".slide");
-  const descriptions = document.querySelectorAll(".description");
+const slides = document.querySelectorAll(".slide");
+const descriptions = document.querySelectorAll(".description");
 
+function sliderPlugin(activeSlide = 0) {
   slides[activeSlide].classList.add("active");
   descriptions[activeSlide].classList.add("active");
 
@@ -35,4 +35,25 @@ function sliderPlugin(activeSlide = 0) {
   };
 }
 
+function dragstart(e) {
+  // e.target.classList.add("active");
+  e.target.classList.add("hold");
+  setTimeout(() => {
+    e.target.classList.add("hide");
+  });
+}
+
+function dragend(e) {
+  e.target.classList.remove("hold", "hide");
+}
+
+function dragAndDropPlugin() {
+  slides.forEach((slide) => {
+    slide.addEventListener("dragstart", dragstart);
+    slide.addEventListener("dragend", dragend);
+    slide.setAttribute("draggable", "true");
+  });
+}
+
+dragAndDropPlugin();
 sliderPlugin();
