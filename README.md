@@ -20,4 +20,4 @@ Pure photo slider with select animation
 
 Drag n drop example on pure js
 
-<img src="./drag-n-drop/gif/ezgif.com-gif-maker (1).giff">
+<img src="./drag-n-drop/gif/ezgif.com-gif-maker (1).gif">
