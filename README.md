@@ -5,6 +5,7 @@
 - [About](#about)
 - [Photo slider](#photoslider)
 - [Drag n drop](#drahndrop)
+- [Vertical slider](#verticalslider)
 
 ## About <a name = "about"></a>
 
@@ -21,3 +22,9 @@ Pure photo slider with select animation
 Drag n drop example on pure js
 
 <img src="./drag-n-drop/gif/ezgif.com-gif-maker (1).gif">
+
+## Vertical slider<a name = "verticalslider"></a>
+
+Vertical photo slider
+
+<img src="./slider/gif/ezgif.com-gif-maker (2).gif">
